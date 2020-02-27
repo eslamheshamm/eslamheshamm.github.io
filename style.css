@@ -10,3 +10,6 @@ body {
     font-family: 'Tomorrow', sans-serif;
     text-align: center;
 }
+h1 {
+    border: 3px solid #333333;
+}
