@@ -9,7 +9,7 @@ export default function ThemeToggle() {
 						type="checkbox"
 						className="hidden"
 						onChange={(e) => toggleTheme(e.target.checked ? "dark" : "light")}
-						checked={theme === "dark"}
+						// checked={theme === "dark"}
 					/>
 					<svg
 						xmlns="http://www.w3.org/2000/svg"
