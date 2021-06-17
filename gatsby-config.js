@@ -1,6 +1,7 @@
 module.exports = {
 	siteMetadata: {
 		title: "eslam-hesham",
+		siteUrl: `https://eslamhesham.gatsbyjs.io`,
 	},
 	plugins: [
 		"gatsby-plugin-postcss",
