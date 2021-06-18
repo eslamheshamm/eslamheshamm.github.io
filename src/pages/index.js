@@ -67,7 +67,7 @@ const IndexPage = () => {
 	const theme = "dark";
 	return (
 		<>
-			<header className="dark:bg-black">
+			<header className="dark:bg-[#121212]">
 				<nav className="flex justify-between items-center w-10/12 mx-auto pt-14">
 					<Link
 						to="/"
