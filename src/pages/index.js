@@ -14,6 +14,7 @@ import AboutMe from "../components/home/about-me";
 import Projects from "../components/home/projects";
 import ContactMe from "../components/home/contact-me";
 import ThemeToggle from "../components/themeToggle";
+import classNames from "classnames";
 
 const IndexPage = () => {
 	const useStyles = makeStyles((theme) => ({
@@ -22,17 +23,16 @@ const IndexPage = () => {
 		},
 		paper: {
 			boxShadow: " none",
+			marginTop: ".2rem",
 		},
 		menu: {
 			border: 0,
 			borderRadius: 1,
-			padding: 0,
 			backgroundColor: "transparent",
 			boxShadow: "none",
 		},
 		menuItem: {
 			backgroundColor: "transparent",
-			color: "red",
 		},
 	}));
 
@@ -83,7 +83,7 @@ const IndexPage = () => {
 							className="border-opacity-0 focus:outline-none ml-4 "
 							aria-controls={open ? "menu-list-grow" : undefined}
 						>
-							<Hamburger toggled={open} toggle={setOpen} color={"#E5E7EB"} />
+							<Hamburger toggled={open} toggle={setOpen} color={"#373737"} />
 						</button>
 
 						<Popper
@@ -115,7 +115,10 @@ const IndexPage = () => {
 														handleClose(e);
 														handleScrollProjects(e);
 													}}
-													className={classes.menuItem}
+													className={classNames(
+														"hover:font-bold",
+														classes.menuItem
+													)}
 												>
 													Projects
 												</MenuItem>
@@ -124,11 +127,31 @@ const IndexPage = () => {
 														handleClose(e);
 														handleScrollContact(e);
 													}}
+													className={classNames(
+														"hover:font-bold",
+														classes.menuItem
+													)}
 												>
 													Let's Talk
 												</MenuItem>
-												<MenuItem onClick={handleClose}>GitHub</MenuItem>
-												<MenuItem onClick={handleClose}>Résumé</MenuItem>
+												<MenuItem
+													onClick={handleClose}
+													className={classNames(
+														"hover:font-bold",
+														classes.menuItem
+													)}
+												>
+													GitHub
+												</MenuItem>
+												<MenuItem
+													onClick={handleClose}
+													className={classNames(
+														"hover:font-bold",
+														classes.menuItem
+													)}
+												>
+													Résumé
+												</MenuItem>
 											</MenuList>
 										</ClickAwayListener>
 									</Paper>
