@@ -13,13 +13,13 @@ const Projects = React.forwardRef((props, ref) => (
 		<ul className="grid md:grid-cols-2 lg:grid-cols-3 gap-6">
 			<Project
 				title="Pickly"
-				github="https://eslamheshamm.github.io/"
+				github="https://github.com/m3ntorship/pickly-frontend-v1"
 				liveOne="https://pickly-frontend-dev.m3ntorship.net/post"
 				description="React,TailwindCSS"
 			/>
 			<Project
 				title="Personal Resume"
-				github="https://eslamheshamm.github.io/"
+				github="https://github.com/m3ntorship/personal-resume"
 				liveOne="https://personal-resume-fullstack-dev-fe.m3ntorship.net/"
 				description="Gatsby.js, Sanity,TailwindCSS."
 			/>
@@ -31,37 +31,36 @@ const Projects = React.forwardRef((props, ref) => (
 			/>
 			<Project
 				title="Momen Hesham"
-				github="https://eslamheshamm.github.io/"
+				github="https://github.com/eslamheshamm/momenhesham-project"
 				liveOne="https://momenhesham-portfolio.vercel.app/"
 				description="Next.js, Sanity, TailwindCSS."
 			/>{" "}
 			<Project
 				title="Gezery"
-				github="https://eslamheshamm.github.io/"
 				liveOne="https://gezery.com/"
 				description="Vanilla JS,HTML,CSS"
 			/>
 			<Project
 				title="Digitage Studio"
-				github="https://eslamheshamm.github.io/"
+				github="https://github.com/eslamheshamm/digitage-project"
 				liveOne="https://digitagestudio.com/"
 				description="Gatsby.js,TailwindCSS"
 			/>
 			<Project
 				title="Artlex Community"
-				github="https://eslamheshamm.github.io/"
+				github="https://github.com/eslamheshamm/artlex-blog"
 				liveOne="https://artlex-blog.vercel.app/"
 				description="Next.js, Sanity(CMS), TailwindCSS."
 			/>
 			<Project
 				title="Abdelrahman Ebrahim"
-				github="https://eslamheshamm.github.io/"
+				github="https://github.com/eslamheshamm/abdelrahman-project"
 				liveOne="https://abdelrahman-ebrahim.netlify.app/"
 				description="Next.js, Sanity(CMS), TailwindCSS."
 			/>
 			<Project
 				title="Owls Social"
-				github="https://eslamheshamm.github.io/"
+				github="https://github.com/eslamheshamm/owls-social"
 				liveOne="https://owls-social.netlify.app//"
 				description="Gatsby.js,TailwindCSS"
 			/>
