@@ -1,50 +1,19 @@
 import * as React from "react";
-import Layouts from "../components/layouts";
-import ClickAwayListener from "@material-ui/core/ClickAwayListener";
-import Grow from "@material-ui/core/Grow";
-import Paper from "@material-ui/core/Paper";
-import Popper from "@material-ui/core/Popper";
-import MenuItem from "@material-ui/core/MenuItem";
-import MenuList from "@material-ui/core/MenuList";
-import { makeStyles } from "@material-ui/core/styles";
-import { Spin as Hamburger } from "hamburger-react";
 import { Link } from "gatsby";
+
+import { Spin as Hamburger } from "hamburger-react";
 import logo from "../images/logo.png";
+
 import AboutMe from "../components/home/about-me";
 import Projects from "../components/home/projects";
 import ContactMe from "../components/home/contact-me";
 import ThemeToggle from "../components/themeToggle";
-import classNames from "classnames";
-
+import Seo from "../components/seo";
 const IndexPage = () => {
-	const useStyles = makeStyles((theme) => ({
-		root: {
-			display: "flex",
-		},
-		paper: {
-			boxShadow: " none",
-			marginTop: ".2rem",
-		},
-		menu: {
-			border: 0,
-			borderRadius: 1,
-			backgroundColor: "transparent",
-			boxShadow: "none",
-		},
-		menuItem: {
-			backgroundColor: "transparent",
-		},
-	}));
-
-	const classes = useStyles();
 	const [open, setOpen] = React.useState(false);
-	const anchorRef = React.useRef(null);
 	const projectsRef = React.useRef(null);
 	const contactRef = React.useRef(null);
-	const handleClose = (event) => {
-		if (anchorRef.current && anchorRef.current.contains(event.target)) {
-			return;
-		}
+	const handleClose = () => {
 		setOpen(false);
 	};
 	const handleScrollProjects = () => {
@@ -58,114 +27,81 @@ const IndexPage = () => {
 		}
 	};
 
-	const handleListKeyDown = (event) => {
-		if (event.key === "Tab") {
-			event.preventDefault();
-			setOpen(false);
-		}
-	};
-	const theme = "dark";
 	return (
 		<>
+			<Seo title="Home" />
 			<header className="dark:bg-[#121212]">
-				<nav className="flex justify-between items-center w-10/12 mx-auto pt-14">
+				<nav className="flex items-center justify-between w-11/12 mx-auto pt-14">
 					<Link
 						to="/"
 						className="flex items-center justify-center dark:text-white"
 					>
-						<img src={logo} alt="Eslam Hesham" className="mr-4" />
-						<h2 className="font-bold text-2xl ">Eslam Hesham</h2>
+						<img src={logo} alt="Eslam Hesham" className="mr-3 sm:mr-4" />
+						<h2 className="font-bold sm:text-2xl ">Eslam Hesham</h2>
 					</Link>
-					<div className="flex items-center">
-						<ThemeToggle />
-						<button
-							ref={anchorRef}
-							className="border-opacity-0 focus:outline-none ml-4 "
-							aria-controls={open ? "menu-list-grow" : undefined}
-						>
+					<ul className="flex items-center justify-end">
+						<li className="">
+							<ThemeToggle />
+						</li>
+						<li className="ml-4">
 							<Hamburger toggled={open} toggle={setOpen} color={"#373737"} />
-						</button>
-
-						<Popper
-							open={open}
-							anchorEl={anchorRef.current}
-							role={undefined}
-							className={classes.paper}
-							transition
-							disablePortal
-						>
-							{({ TransitionProps, placement }) => (
-								<Grow
-									{...TransitionProps}
-									style={{
-										transformOrigin:
-											placement === "bottom" ? "center top" : "center bottom",
-									}}
-								>
-									<Paper className={classes.paper}>
-										<ClickAwayListener onClickAway={handleClose}>
-											<MenuList
-												className={classes.menu}
-												autoFocusItem={open}
-												id="menu-list-grow"
-												onKeyDown={handleListKeyDown}
-											>
-												<MenuItem
-													onClick={(e) => {
-														handleClose(e);
-														handleScrollProjects(e);
-													}}
-													className={classNames(
-														"hover:font-bold",
-														classes.menuItem
-													)}
-												>
-													Projects
-												</MenuItem>
-												<MenuItem
-													onClick={(e) => {
-														handleClose(e);
-														handleScrollContact(e);
-													}}
-													className={classNames(
-														"hover:font-bold",
-														classes.menuItem
-													)}
-												>
-													Let's Talk
-												</MenuItem>
-												<MenuItem
-													onClick={handleClose}
-													className={classNames(
-														"hover:font-bold",
-														classes.menuItem
-													)}
-												>
-													GitHub
-												</MenuItem>
-												<MenuItem
-													onClick={handleClose}
-													className={classNames(
-														"hover:font-bold",
-														classes.menuItem
-													)}
-												>
-													Résumé
-												</MenuItem>
-											</MenuList>
-										</ClickAwayListener>
-									</Paper>
-								</Grow>
+							{open && (
+								<ul className="absolute top-28 w-28 rounded-lg bg-gray-100 transform -translate-x-2/4 overflow-hidden">
+									<li>
+										{" "}
+										<button
+											className="h-10 flex items-center w-full  rounded-lg  transition-all p-4 hover:bg-gray-50 outline-none focus:outline-none "
+											onClick={() => {
+												handleClose();
+												handleScrollProjects();
+											}}
+										>
+											Projects
+										</button>
+									</li>
+									<li>
+										<button
+											className="h-10 flex items-center w-full font-semibold rounded-lg transition-all p-4 hover:bg-gray-50 outline-none focus:outline-none "
+											onClick={() => {
+												handleClose();
+												handleScrollContact();
+											}}
+										>
+											Let's Talk
+										</button>
+									</li>
+									<li>
+										<a
+											href="https://github.com/eslamheshamm"
+											target="_blank"
+											rel="noopener noreferrer"
+											className=" h-10 flex items-center w-full rounded-lg transition-all p-4 hover:bg-gray-50 "
+										>
+											GitHub
+										</a>
+									</li>
+									<li>
+										{" "}
+										<a
+											href="https://docs.google.com/document/d/e/2PACX-1vRjAfwhkhrz1VnnuoEIf2vj8CV1vr-6R7tK5sGCG4E0oBzcxFDCsRH87-xIFJVGdgZYc4Jz-0URtf-b/pub"
+											target="_blank"
+											rel="noopener noreferrer"
+											className=" h-10 flex items-center w-full rounded-lg transition-all p-4 hover:bg-gray-50 "
+										>
+											Résumé
+										</a>
+									</li>
+								</ul>
 							)}
-						</Popper>
-					</div>
+						</li>
+					</ul>
 				</nav>
 			</header>
-			<Layouts>
+			<main className="font-Poppins min-h-screen dark:bg-[#121212] dark:text-white">
 				<AboutMe />
 				<Projects ref={projectsRef} />
 				<ContactMe ref={contactRef} />
-			</Layouts>
+			</main>
 		</>
 	);
 };
