@@ -22,5 +22,17 @@ module.exports = {
 			},
 			__key: "images",
 		},
+		{
+			resolve: `gatsby-plugin-manifest`,
+			options: {
+				name: `Eslam Hesham - Front End Developer`,
+				short_name: `Eslam Hesham`,
+				start_url: `/`,
+				background_color: `#121212`,
+				theme_color: `#242424`,
+				display: `minimal-ui`,
+				icon: `src/images/logo.png`, // This path is relative to the root of the site.
+			},
+		},
 	],
 };
