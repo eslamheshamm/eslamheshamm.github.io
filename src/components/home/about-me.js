@@ -18,9 +18,11 @@ const AboutMe = () => (
 			</a>
 		</div>
 		<p className="text-lg opacity-30">
-			Tortor aliquam ac fermentum neque. Magna vestibulum tristique donec et.
-			Amet etiam <br /> sed porttitor sociis. Mi libero tortor vulputate amet a
-			augue sed.
+			Innovative Front-End developer with +1-year experience <br /> building and
+			maintaining responsive websites in different industries. <br /> Proficient
+			in HTML, CSS, JavaScript, <br /> plus modern libraries and frameworks{" "}
+			<br /> such as React, Next.js, Gatsby. <br /> passionate about usability
+			and creating accessible user interfaces.
 		</p>
 	</section>
 );
