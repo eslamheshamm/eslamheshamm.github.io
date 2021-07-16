@@ -63,6 +63,11 @@ function Seo({ description, lang, meta, title }) {
 					content: metaDescription,
 				},
 				{
+					name: `og:type`,
+					content: `website`,
+				},
+				{ name: `og:url`, content: `https://eslamheshamm.github.io/` },
+				{
 					name: `og:image`,
 					content: `https://res.cloudinary.com/eslamhesham/image/upload/v1626462449/eslam_x85ni8.png`,
 				},
