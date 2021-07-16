@@ -1,7 +1,9 @@
 module.exports = {
 	siteMetadata: {
-		title: "eslam-hesham",
-		siteUrl: `https://eslamhesham.gatsbyjs.io`,
+		title: "Eslam Hesham",
+		description: `Innovative Front-End developer with +1year experience building and maintaining responsive websites in different industries. Proficient in HTML, CSS, JavaScript, plus modern libraries and frameworks such as React, Next.js, Gatsby.js`,
+		author: `@eslamheshamm`,
+		siteUrl: `https://eslamhesham.github.io`,
 	},
 	plugins: [
 		"gatsby-plugin-postcss",
