@@ -64,7 +64,7 @@ function Seo({ description, lang, meta, title }) {
 				},
 				{
 					name: `og:image`,
-					content: `${home}`,
+					content: `https://res.cloudinary.com/eslamhesham/image/upload/v1626462449/eslam_x85ni8.png`,
 				},
 			].concat(meta)}
 		/>
