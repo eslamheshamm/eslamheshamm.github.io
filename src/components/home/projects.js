@@ -8,9 +8,7 @@ const Projects = React.forwardRef((props, ref) => (
 	>
 		<h1 className="text-4xl md:text-6xl font-bold">Projects</h1>
 		<p className="text-lg opacity-30 mt-10 mb-24">
-			Tortor aliquam ac fermentum neque. Magna vestibulum tristique donec et.
-			Amet etiam <br /> sed porttitor sociis. Mi libero tortor vulputate amet a
-			augue sed.
+			I love to create projects while learning new things.
 		</p>
 		<ul className="grid md:grid-cols-2 lg:grid-cols-3 gap-6">
 			<Project
