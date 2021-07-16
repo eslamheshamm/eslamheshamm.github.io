@@ -16,6 +16,7 @@
 	},
 	"dependencies": {
 		"@formspark/use-formspark": "^0.1.33",
+		"classnames": "^2.3.1",
 		"gatsby": "^3.6.2",
 		"gatsby-plugin-dark-mode": "^1.1.2",
 		"gatsby-plugin-gatsby-cloud": "^2.7.1",
