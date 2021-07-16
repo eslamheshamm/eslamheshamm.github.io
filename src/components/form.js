@@ -1,54 +1,30 @@
 import React from "react";
 import { useForm } from "react-hook-form";
+import { useFormspark } from "@formspark/use-formspark";
 import classNames from "classnames";
-
-function encode(data) {
-	return Object.keys(data)
-		.map((key) => encodeURIComponent(key) + "=" + encodeURIComponent(data[key]))
-		.join("&");
-}
 
 const FormInputs = () => {
 	const {
 		register,
 		handleSubmit,
 		formState: { errors },
-		watch,
 	} = useForm();
-	var regex = /[^\s@]+@[^\s@]+\.[^\s@]+/;
 
 	const [succes, setSucces] = React.useState(false);
-	const [active, setActive] = React.useState(false);
-	const watchEmail = watch("email", false);
-	const watchName = watch("name", false);
-
-	React.useEffect(() => {
-		if (regex.test(watchEmail) && watchName.length > 5) {
-			setActive(true);
-			console.log("hi");
-		} else {
-			setActive(false);
-		}
-	}, [watchEmail, watchName]);
-	const InputStyles =
-		"py-8 px-6 border-2 dark:focus:border-[#3D3D3D] dark:border-[#222222] dark:bg-[#1D1D1D]  focus:outline-none block w-full";
-	const onSubmit = (data, e) => {
+	const [error, setError] = React.useState(null);
+	const [submit] = useFormspark({
+		formId: "4FkSwaPc",
+	});
+	const onSubmit = async (data, e) => {
 		e.preventDefault();
-		const form = e.target;
-		fetch("/", {
-			method: "POST",
-			headers: { "Content-Type": "application/x-www-form-urlencoded" },
-			body: encode({
-				"form-name": form.getAttribute("name"),
-				...data,
-			}),
-		})
+		await submit({ ...data })
 			.then(() => {
 				setSucces(true);
-				setActive(false);
 			})
-			.catch((error) => alert(error));
+			.catch((error) => setError(error));
 	};
+	const InputStyles =
+		"py-8 px-6 border-2 dark:focus:border-[#3D3D3D] dark:border-[#222222] dark:bg-[#1D1D1D]  focus:outline-none block w-full";
 	return (
 		<form
 			onSubmit={handleSubmit(onSubmit)}
@@ -109,12 +85,13 @@ const FormInputs = () => {
 			</label>
 
 			{succes && <p className="font-bold my-2">Thank You!</p>}
-
+			{error && (
+				<p className="font-bold my-2">Sorry something wrong happened.</p>
+			)}
 			<button
 				type="submit"
 				className={classNames(
 					"self-end py-6 px-20 font-bold  text-lg text-black dark:text-white dark:bg-[#242424] bg-black  bg-opacity-10",
-					active && "animate-pulse",
 					succes && "cursor-not-allowed animate-none"
 				)}
 				disabled={succes}
