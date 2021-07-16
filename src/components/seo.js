@@ -69,7 +69,7 @@ function Seo({ description, lang, meta, title }) {
 				{ name: `og:url`, content: `https://eslamheshamm.github.io/` },
 				{
 					name: `og:image`,
-					content: `https://res.cloudinary.com/eslamhesham/image/upload/v1626462449/eslam_x85ni8.png`,
+					content: `https://res.cloudinary.com/eslamhesham/image/upload/v1626464103/eslam_x85ni8.png`,
 				},
 			].concat(meta)}
 		/>
