@@ -68,6 +68,17 @@ const Projects = React.forwardRef((props, ref) => (
 				description="Gatsby.js,TailwindCSS"
 			/>
 		</ul>
+		<h2 className="w-full text-center  my-6">
+			{" "}
+			<a
+				href="https://github.com/eslamheshamm"
+				target="_blank"
+				rel="noopener noreferrer"
+				className=" italic underline font-bold "
+			>
+				+MORE
+			</a>
+		</h2>
 	</section>
 ));
 
