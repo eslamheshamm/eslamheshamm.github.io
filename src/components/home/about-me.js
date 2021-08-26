@@ -5,7 +5,7 @@ const AboutMe = () => (
 		<div className="flex flex-col sm:flex-row  sm:items-center mt-3 mb-6">
 			<h2>Junior Front-End Developer</h2>
 			<a
-				href="http://google.com"
+				href="https://www.linkedin.com/in/eslamhesham/"
 				target="_blank"
 				rel="noopener noreferrer"
 				className="flex items-center"
@@ -18,11 +18,11 @@ const AboutMe = () => (
 			</a>
 		</div>
 		<p className="text-lg opacity-30">
-			Innovative Front-End developer with +1-year experience <br /> building and
+			Innovative Front-End developer with +1year experience building and
 			maintaining responsive websites in different industries. <br /> Proficient
-			in HTML, CSS, JavaScript, <br /> plus modern libraries and frameworks{" "}
-			<br /> such as React, Next.js, Gatsby. <br /> passionate about usability
-			and creating accessible user interfaces.
+			in HTML, CSS, JavaScript, plus modern libraries {`<React />`} and
+			frameworks such as Next.js, Gatsby. <br /> Passionate about learning new
+			technologies.
 		</p>
 	</section>
 );
