@@ -1,13 +1,11 @@
-import React, { useState, useEffect } from "react";
+import React from "react";
 import { Link } from "gatsby";
 import ThemeToggle from "./themeToggle";
 import { Spin as Hamburger } from "hamburger-react";
 import logo from "../images/logo.png";
-import { disableBodyScroll, clearAllBodyScrollLocks } from "body-scroll-lock";
 
 const NavBar = (props) => {
 	const { handleScrollContact, handleScrollProjects, open, setOpen } = props;
-
 	const handleClose = () => {
 		setOpen(false);
 	};

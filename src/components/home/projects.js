@@ -2,7 +2,7 @@ import React from "react";
 import Project from "../project-preview";
 const Projects = React.forwardRef((props, ref) => (
 	<section
-		className="w-11/12 md:w-10/12 min-h-screen mx-auto mb-52"
+		className="w-11/12 md:w-10/12 min-h-screen mx-auto mb-52 overflow-y-hidden"
 		{...props}
 		ref={ref}
 	>
@@ -21,7 +21,7 @@ const Projects = React.forwardRef((props, ref) => (
 				title="Personal Resume"
 				github="https://github.com/m3ntorship/personal-resume"
 				liveOne="https://personal-resume-fullstack-dev-fe.m3ntorship.net/"
-				description="Gatsby.js, Sanity,TailwindCSS."
+				description="React,TailwindCSS."
 			/>
 			<Project
 				title="Riad Eid"
