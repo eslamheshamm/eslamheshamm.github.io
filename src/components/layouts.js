@@ -13,18 +13,17 @@ const Layouts = (props) => {
 	}, [open]);
 
 	return (
-		<div ref={bodyRef}>
+		<div
+			ref={bodyRef}
+			className={`font-Poppins dark:bg-[#121212] duration-700 ease-in-out  transition-all dark:text-white`}
+		>
 			<NavBar
 				handleScrollProjects={handleScrollProjects}
 				handleScrollContact={handleScrollContact}
 				open={open}
 				setOpen={setOpen}
 			/>
-			<main
-				className={`font-Poppins dark:bg-[#121212]  transition-all dark:text-white`}
-			>
-				{children}
-			</main>
+			<main>{children}</main>
 		</div>
 	);
 };

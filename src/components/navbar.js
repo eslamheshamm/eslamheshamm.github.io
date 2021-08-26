@@ -11,7 +11,7 @@ const NavBar = (props) => {
 	};
 
 	return (
-		<header className={`dark:bg-[#121212]   transition-all`}>
+		<header>
 			<nav className="flex items-center justify-between w-11/12 mx-auto pt-14">
 				<Link
 					to="/"
