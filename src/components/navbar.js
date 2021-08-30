@@ -1,5 +1,5 @@
 import React from "react";
-import { Link } from "gatsby";
+import { Link, navigate } from "gatsby";
 import ThemeToggle from "./themeToggle";
 import { Spin as Hamburger } from "hamburger-react";
 import logo from "../images/logo.png";
@@ -9,10 +9,9 @@ const NavBar = (props) => {
 	const handleClose = () => {
 		setOpen(false);
 	};
-
 	return (
 		<header>
-			<nav className="flex items-center justify-between w-11/12 mx-auto pt-14">
+			<nav className="flex items-center justify-between w-11/12  mx-auto pt-14">
 				<Link
 					to="/"
 					className="flex items-center justify-center dark:text-white "
@@ -33,24 +32,43 @@ const NavBar = (props) => {
 								className={`fixed top-0 left-0 z-30  w-full  min-h-screen dark:text-white  transition-all navbar-background-opacity`}
 							>
 								<div className="text-2xl font-Poppins bg-white transition-all  dark:bg-[#121212] min-h-screen flex flex-col items-center justify-center">
-									<ol className="navbar-animations">
+									<ul className="navbar-animations">
+										<li className=" p-4  outline-none focus:outline-none ">
+											<Link
+												to="/about"
+												onClick={() => {
+													handleClose();
+												}}
+											>
+												About
+											</Link>
+										</li>
 										<li>
 											<button
 												className="    p-4  outline-none focus:outline-none "
 												onClick={() => {
 													handleClose();
-													handleScrollProjects();
+													if (handleScrollProjects) {
+														handleScrollProjects();
+													} else {
+														navigate("/projects");
+													}
 												}}
 											>
 												Projects
 											</button>
 										</li>
+
 										<li className="">
 											<button
 												className=" p-4  outline-none focus:outline-none "
 												onClick={() => {
 													handleClose();
-													handleScrollContact();
+													if (handleScrollContact) {
+														handleScrollContact();
+													} else {
+														navigate("/contact");
+													}
 												}}
 											>
 												Let's Talk
@@ -74,7 +92,7 @@ const NavBar = (props) => {
 												Résumé
 											</a>
 										</li>
-									</ol>
+									</ul>
 								</div>
 							</div>
 						)}
