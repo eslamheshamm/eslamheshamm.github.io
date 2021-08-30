@@ -1,6 +1,6 @@
 import React from "react";
 const AboutMe = () => (
-	<section className="w-11/12 md:w-10/12 mx-auto pt-44 mb-80">
+	<section className="w-11/12  mx-auto pt-44 mb-80">
 		<h1 className="text-4xl md:text-6xl font-bold ">Hi, I’m Eslam</h1>
 		<div className="flex flex-col sm:flex-row  sm:items-center mt-3 mb-6">
 			<h2>Junior Front-End Developer</h2>

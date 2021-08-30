@@ -11,11 +11,10 @@ const Layouts = (props) => {
 	useEffect(() => {
 		open ? scrollNone() : clearAllBodyScrollLocks();
 	}, [open]);
-
 	return (
 		<div
 			ref={bodyRef}
-			className={`font-Poppins dark:bg-[#121212] duration-700 ease-in-out  transition-all dark:text-white`}
+			className={`font-Poppins dark:bg-[#121212] duration-500 ease-in-out min-h-screen transition-all dark:text-white`}
 		>
 			<NavBar
 				handleScrollProjects={handleScrollProjects}
