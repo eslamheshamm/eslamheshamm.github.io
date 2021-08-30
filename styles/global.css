@@ -5,7 +5,7 @@
 
 .navbar-background-opacity {
 	animation-name: navOpacity;
-	animation-duration: 0.8s;
+	animation-duration: 0.6s;
 }
 @keyframes navOpacity {
 	from {
@@ -18,7 +18,7 @@
 
 .navbar-animations {
 	animation-name: navAnimations;
-	animation-duration: 1s;
+	animation-duration: 0.8s;
 }
 @keyframes navAnimations {
 	from {
