@@ -6,7 +6,7 @@ module.exports = {
 		description:
 			"Innovative Front-End developer with +1year experience of building and maintaining responsive websites in different industries. Proficient in HTML, CSS, JavaScript, plus modern libraries <React /> and frameworks such as Next.js, Gatsby.js",
 		url: "https://eslamhesham.github.io", // No trailing slash allowed!
-		image: "/images/eslamhesham.jpg", // Path to your image you placed in the 'static' folder
+		image: "./src/images/eslamhesham.jpg", // Path to your image you placed in the 'static' folder
 		twitterUsername: "@_eslamdev",
 	},
 	plugins: [
