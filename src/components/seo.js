@@ -27,7 +27,10 @@ const SEO = ({ title, description }) => {
 		<Helmet title={seo.title} titleTemplate={titleTemplate}>
 			{/* general tags */}
 			<meta name="description" content={seo.description} />
-			<meta name="image" content={seo.image} />
+			<meta
+				name="image"
+				content="https://res.cloudinary.com/eslamhesham/image/upload/v1631100638/og-eslamhesham_vo0mkt.png"
+			/>
 
 			{/* og tags */}
 			{/* {(article ? true : null) && <meta property="og:type" content="article" />} */}
