@@ -17,7 +17,7 @@ const SEO = ({ title, description, image, article }) => {
 	const seo = {
 		title: title || defaultTitle,
 		description: description || defaultDescription,
-		image: `https://res.cloudinary.com/eslamhesham/image/upload/v1631098128/eslamhesham_om76ug.jpg`,
+		image: `https://res.cloudinary.com/eslamhesham/image/upload/v1631100638/og-eslamhesham_vo0mkt.png`,
 		url: `${siteUrl}${pathname}`,
 	};
 	console.clear();
@@ -29,8 +29,10 @@ const SEO = ({ title, description, image, article }) => {
 			{/* general tags */}
 			<meta name="description" content={seo.description} />
 			<meta name="image" content={seo.image} />
+
 			{/* og tags */}
-			{(article ? true : null) && <meta property="og:type" content="article" />}
+			{/* {(article ? true : null) && <meta property="og:type" content="article" />} */}
+			<meta property="og:type" content="website" />
 			{seo.url && <meta property="og:url" content={seo.url} />}
 			{seo.title && <meta property="og:title" content={seo.title} />}
 			{seo.description && (
