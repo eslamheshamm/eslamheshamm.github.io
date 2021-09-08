@@ -3,7 +3,7 @@ import PropTypes from "prop-types";
 import { Helmet } from "react-helmet";
 import { useLocation } from "@reach/router";
 import { useStaticQuery, graphql } from "gatsby";
-const SEO = ({ title, description, image, article }) => {
+const SEO = ({ title, description }) => {
 	const { pathname } = useLocation();
 	const { site } = useStaticQuery(query);
 	const {
@@ -11,7 +11,6 @@ const SEO = ({ title, description, image, article }) => {
 		titleTemplate,
 		defaultDescription,
 		siteUrl,
-		defaultImage,
 		twitterUsername,
 	} = site.siteMetadata;
 	const seo = {
@@ -38,7 +37,12 @@ const SEO = ({ title, description, image, article }) => {
 			{seo.description && (
 				<meta property="og:description" content={seo.description} />
 			)}
-			{seo.image && <meta property="og:image" content={seo.image} />}
+			{seo.image && (
+				<meta
+					property="og:image"
+					content="https://res.cloudinary.com/eslamhesham/image/upload/v1626464103/eslam_x85ni8.png"
+				/>
+			)}
 			{/* twitter tags */}
 			<meta name="twitter:card" content="summary_large_image" />
 			{twitterUsername && (
@@ -48,7 +52,14 @@ const SEO = ({ title, description, image, article }) => {
 			{seo.description && (
 				<meta name="twitter:description" content={seo.description} />
 			)}
-			{seo.image && <meta name="twitter:image" content={seo.image} />}
+			{seo.image && (
+				<meta
+					name="twitter:image"
+					content={
+						"https://res.cloudinary.com/eslamhesham/image/upload/v1626464103/eslam_x85ni8.png"
+					}
+				/>
+			)}
 		</Helmet>
 	);
 };
@@ -74,7 +85,6 @@ const query = graphql`
 				titleTemplate
 				defaultDescription: description
 				siteUrl: url
-				defaultImage: image
 				twitterUsername
 			}
 		}
