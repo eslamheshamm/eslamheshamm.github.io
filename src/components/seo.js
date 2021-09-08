@@ -40,7 +40,7 @@ const SEO = ({ title, description }) => {
 			{seo.image && (
 				<meta
 					property="og:image"
-					content="https://res.cloudinary.com/eslamhesham/image/upload/v1626464103/eslam_x85ni8.png"
+					content="https://res.cloudinary.com/eslamhesham/image/upload/v1631100638/og-eslamhesham_vo0mkt.png"
 				/>
 			)}
 			{/* twitter tags */}
@@ -56,7 +56,7 @@ const SEO = ({ title, description }) => {
 				<meta
 					name="twitter:image"
 					content={
-						"https://res.cloudinary.com/eslamhesham/image/upload/v1626464103/eslam_x85ni8.png"
+						"https://res.cloudinary.com/eslamhesham/image/upload/v1631100638/og-eslamhesham_vo0mkt.png"
 					}
 				/>
 			)}
