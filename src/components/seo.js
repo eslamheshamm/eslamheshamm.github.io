@@ -17,7 +17,7 @@ const SEO = ({ title, description, image, article }) => {
 	const seo = {
 		title: title || defaultTitle,
 		description: description || defaultDescription,
-		image: `${image || defaultImage}`,
+		image: `https://res.cloudinary.com/eslamhesham/image/upload/v1631098128/eslamhesham_om76ug.jpg`,
 		url: `${siteUrl}${pathname}`,
 	};
 	console.clear();
