@@ -19,10 +19,6 @@ const SEO = ({ title, description }) => {
 		image: `https://res.cloudinary.com/eslamhesham/image/upload/v1631100638/og-eslamhesham_vo0mkt.png`,
 		url: `${siteUrl}${pathname}`,
 	};
-	console.clear();
-	console.log(site.siteMetadata);
-	console.log(seo);
-	console.log(seo.image);
 	return (
 		<Helmet title={seo.title} titleTemplate={titleTemplate}>
 			{/* general tags */}

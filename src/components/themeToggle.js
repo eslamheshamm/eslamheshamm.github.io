@@ -4,7 +4,7 @@ export default function ThemeToggle() {
 	return (
 		<ThemeToggler>
 			{({ theme, toggleTheme }) => (
-				<label className="w-10 h-10  flex items-center justify-center bg-gray-200 rounded dark:bg-gray-800">
+				<label className="w-10 h-10  flex items-center justify-center bg-gray-200 rounded dark:bg-gray-800 cursor-pointer">
 					<input
 						type="checkbox"
 						className="hidden"
