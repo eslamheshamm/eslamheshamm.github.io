@@ -1,5 +1,8 @@
 module.exports = {
-	content: ["./src/**/*.{js,jsx,ts,tsx}"],
+	content: [
+		"./src/**/*.{js,jsx,ts,tsx}",
+		"./node_modules/@themesberg/flowbite/**/*.js",
+	],
 	darkMode: "class", // or 'media' or 'class'
 	theme: {
 		extend: {
