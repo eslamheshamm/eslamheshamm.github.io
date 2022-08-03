@@ -85,7 +85,7 @@ const ProjectsPage = () => {
 		<>
 			<Seo title="Projects" />
 			<Layouts>
-				<section className="w-11/12  min-h-screen mx-auto overflow-y-hidden">
+				<section className="w-10/12 lg:w-8/12  min-h-screen mx-auto overflow-y-hidden">
 					<h1 className="text-4xl  md:text-6xl font-bold mt-44 mb-24">
 						Projects
 					</h1>

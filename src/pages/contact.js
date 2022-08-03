@@ -8,7 +8,7 @@ const ContactPage = () => {
 		<>
 			<Seo title="Contact me" />
 			<Layouts>
-				<section className="w-11/12  mx-auto mt-44 overflow-y-hidden">
+				<section className="w-10/12 lg:w-8/12  mx-auto mt-44 overflow-y-hidden">
 					<article className=" lg:w-9/12 xl:w-7/12">
 						<h1 className="text-3xl sm:5xl md:text-6xl font-bold">
 							Let’s work together?

@@ -7,6 +7,39 @@ import Layouts from "../components/layouts";
 import FormInputs from "../components/form";
 const ProjectsArray = [
 	{
+		title: "BMW Performance Center",
+		liveOne: "https://bmwperformancecenter.com/",
+		description: "Gatsby,Node.js",
+	},
+	{
+		title: "Pylon UMP",
+		liveOne: "https://pylonump.com/",
+		description: "Gatsby,Sanit(CMS),TailwindCSS",
+	},
+	{
+		title: "Riad Eid",
+		github: "https://github.com/eslamheshamm/riad-eid-project/",
+		liveOne: "http://riadeid.net/",
+		description: "Gatsby.js, Sanity(CMS),TailwindCSS.",
+	},
+	{
+		title: "Momen Hesham",
+		github: "https://github.com/eslamheshamm/momenhesham-project",
+		liveOne: "http://observer.studio/",
+		description: "Next.js, Sanity(CMS), TailwindCSS.",
+	},
+	{
+		title: "Gezery",
+		liveOne: "http://gezery.studio/",
+		description: "JS,HTML,CSS",
+	},
+	{
+		title: "Digitage Studio",
+		github: "https://github.com/eslamheshamm/digitage-project",
+		liveOne: "https://digitagestudio.com/",
+		description: "Gatsby.js,TailwindCSS",
+	},
+	{
 		title: "Pickly",
 		github: "https://github.com/m4ntorship/pickly-frontend-v1",
 		liveOne: "https://pickly-frontend-dev.m3ntorship.net/post",
@@ -17,29 +50,6 @@ const ProjectsArray = [
 		github: "https://github.com/m3ntorship/personal-resume",
 		liveOne: "https://personal-resume-fullstack-dev-fe.m3ntorship.net/",
 		description: "React,TailwindCSS.",
-	},
-	{
-		title: "Riad Eid",
-		github: "https://github.com/eslamheshamm/riad-eid-project/",
-		liveOne: "http://riadeid.net/",
-		description: "Gatsby.js, Sanity,TailwindCSS.",
-	},
-	{
-		title: "Momen Hesham",
-		github: "https://github.com/eslamheshamm/momenhesham-project",
-		liveOne: "http://observer.studio/",
-		description: "Next.js, Sanity, TailwindCSS.",
-	},
-	{
-		title: "Gezery",
-		liveOne: "https://gezery.com/",
-		description: "Vanilla JS,HTML,CSS",
-	},
-	{
-		title: "Digitage Studio",
-		github: "https://github.com/eslamheshamm/digitage-project",
-		liveOne: "https://digitagestudio.com/",
-		description: "Gatsby.js,TailwindCSS",
 	},
 ];
 const IndexPage = () => {
@@ -71,7 +81,7 @@ const IndexPage = () => {
 			>
 				<AboutMe />
 				<section
-					className="w-11/12  mx-auto mb-44 overflow-y-hidden"
+					className="w-10/12 lg:w-8/12  mx-auto mb-44 overflow-y-hidden"
 					ref={projectsRef}
 				>
 					<h2 className=" inline-block">
@@ -112,7 +122,7 @@ const IndexPage = () => {
 				</section>
 				<section
 					ref={contactRef}
-					className="w-11/12  mx-auto pb-44 overflow-y-hidden"
+					className="w-10/12 lg:w-8/12  mx-auto pb-44 overflow-y-hidden"
 				>
 					<article className=" lg:w-9/12 xl:w-7/12">
 						<h1 className="text-3xl sm:5xl md:text-6xl font-bold">
